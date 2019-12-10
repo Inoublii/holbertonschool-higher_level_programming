@@ -1,2 +1,7 @@
 #!/bin/bash
 python3 -m py_compile $PYFILE
+<<<<<<< HEAD
+=======
+mv __pycache__/*.pyc ./$PYFILE'c'
+chmod +x $PYFILE'c'; rmdir __pycache__
+>>>>>>> b05e57e978a79542cc2594955dafa125a90c538e
