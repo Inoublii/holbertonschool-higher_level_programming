@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 for i in range(97, 122):
-print(i, end="")
+    if not i == 101 and not i == 113:
+        print('{:c}'.format(i), end="")
