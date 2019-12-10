@@ -6,4 +6,3 @@ def print_last_digit(number):
         number = number % 10
     print(end=''"{}".format(number))
     return number
-
