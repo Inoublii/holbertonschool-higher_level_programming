@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
 def pow(a, b):
-c = (a ** b)    
+z = a
+e = b
+c = z ** e    
 return c
