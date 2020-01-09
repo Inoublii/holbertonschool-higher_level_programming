@@ -6,4 +6,5 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
 __doc__ = "Square class"
+__doc__ = "__init__ func"
 __dic__ = "__init__"
