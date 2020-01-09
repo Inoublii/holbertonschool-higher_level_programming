@@ -9,4 +9,4 @@ class Square:
     def area(self):
         return(self.__size * self.__size)
 __doc = "Square class"
-
+__square_size = {}
