@@ -60,7 +60,9 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
-	def __str__(self):
+
+    def __str__(self):
+
         resp = ""
         if self.__width != 0 and self.__height != 0:
             resp += "\n".join(str(self.print_symbol) * self.__width
