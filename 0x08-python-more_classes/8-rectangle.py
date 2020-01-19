@@ -1,5 +1,15 @@
 #!/usr/bin/python3
+"""
+class Rectangle
+"""
+
+
 class Rectangle:
+    """Rectangle
+    attributes:
+        width: width
+        height: height
+    """
     print_symbol = "#"
     number_of_instances = 0
 
