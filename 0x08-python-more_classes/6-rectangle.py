@@ -1,12 +1,22 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
+"""
+class Rectangle
+"""
+
+
 class Rectangle:
-	number_of_instances = 0
+    """Rectangle
+    attributes:
+        width: width
+        height: height
+    """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         Rectangle.number_of_instances += 1
-		self.__width = width
+        self.__width = width
         self.__height = height
-		
+
     @property
     def width(self):
         return self.__width
@@ -42,6 +52,7 @@ class Rectangle:
 
     def __str__(self):
         resp = ""
+
         if self.__width != 0 and self.__height != 0:
             resp += "\n".join("#" * self.__width for i in range(self.__height))
         return resp
@@ -52,6 +63,6 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
 
-   def __del__(self):
+    def __del__(self):
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
