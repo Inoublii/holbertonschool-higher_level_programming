@@ -20,8 +20,3 @@ Check: passing m_b as None:
 Check: m_b empty rows:
 	 >>> print(lazy_matrix_mul([[1, 2], [2, 1]], [[], []]))
 	 []
-Check: string in list in m_b:
-	 >>> lazy_matrix_mul([[1, 2], [2, 1]], [["GOT", 1], [2, 1]])
-	 Traceback (most recent call last):
-	 ...
-	 TypeError: invalid data type for einsum
