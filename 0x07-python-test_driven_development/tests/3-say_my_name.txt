@@ -6,10 +6,21 @@ Check: module docstring:
 	>>> len(m) > 1
 	True
 
+Check: function docstring:
+	>>> f = __import__("3-say_my_name").say_my_name.__doc__
+	>>> len(f) > 1
+	True
+
+Check: passing None as first name:
+	>>> say_my_name(None, "jihn")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
 
 Check: normal use:
 	>>> say_my_name("johny", "marshall")
 	My name is johny marshall
 	>>> say_my_name("Lester", "Chest")
 	My name is Lester Chest
+
 
