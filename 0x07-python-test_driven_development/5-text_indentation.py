@@ -3,6 +3,8 @@ if __name__ == "__main__":
     import doctest
     doctest.testfile("tests/5-text_indentation.txt")
     """text_indentation"""
+
+
 def text_indentation(text):
 	"""add 2 new lines after '.?:'
     str:
