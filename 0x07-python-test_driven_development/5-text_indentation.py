@@ -6,15 +6,15 @@ if __name__ == "__main__":
 
 
 def text_indentation(text):
-	"""add 2 new lines after '.?:'
+    """add 2 new lines after '.?:'
     str:
         text: str
     Raises:
         TypeError: If text is not str
     """
-	if type(text) != str:
-		raise TypeError("text must be a string")
-	l = ".?:"
-	for x in l:
-		text = (x + "\n\n").join([a.strip(" ") for a in text.split(x)])
-	print(text, end="")
+    if type(text) != str:
+        raise TypeError("text must be a string")
+    l = ".?:"
+    for x in l:
+        text = (x + "\n\n").join([a.strip(" ") for a in text.split(x)])
+    print(text, end="")
