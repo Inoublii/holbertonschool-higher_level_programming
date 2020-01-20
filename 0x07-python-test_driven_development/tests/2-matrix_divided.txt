@@ -11,3 +11,21 @@ Check: function docstring:
 	>>> len(f) > 1
 	True
 
+Check: passing None as matrix:
+	>>> matrix_divided(None, 1)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Check: passing None as div:
+	>>> matrix_divided([[1, 2, 3], [1, 2, 3]], None)
+	Traceback (most recent call last):
+	...
+	TypeError: div must be a number
+
+Check: matrix as string:
+	>>> matrix_divided("Hello world!", 1)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+

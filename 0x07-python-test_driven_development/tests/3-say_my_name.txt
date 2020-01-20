@@ -23,22 +23,3 @@ Check: normal use:
 	>>> say_my_name("Lester", "Chest")
 	My name is Lester Chest
 
-
-Check: passing None as last name:
-	>>> say_my_name("john", None)
-	Traceback (most recent call last):
-	...
-	TypeError: last_name must be a string
-
-Check: wrong type as first name:
-	>>> say_my_name(1, "Hello")
-	Traceback (most recent call last):
-	...
-	TypeError: first_name must be a string
-
-Check: wrong type as last name:
-	>>> say_my_name("mister", [])
-	Traceback (most recent call last):
-	...
-	TypeError: last_name must be a string
-
