@@ -1,10 +1,6 @@
 Importing the function from the module:
 	>>> print_square = __import__("4-print_square").print_square
 
-Check: for module docstring:
-	>>> m = __import__("4-print_square").__doc__
-	>>> len(m) > 1
-	True
 
 Check: function docstring:
 	>>> f = __import__("4-print_square").print_square.__doc__
@@ -46,12 +42,3 @@ Check: negative size:
 	Traceback (most recent call last):
 	...
 	ValueError: size must be >= 0
-
-Check: float types:
-	>>> print_square(2.0)
-	##
-	##
-	>>> print_square(-15.0)
-	Traceback (most recent call last):
-	...
-	TypeError: size must be an integer
