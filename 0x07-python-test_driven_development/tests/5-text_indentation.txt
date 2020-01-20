@@ -1,11 +1,6 @@
 Importing the function from the module:
 	>>> text_indentation = __import__("5-text_indentation").text_indentation
 
-Check: module docstring:
-    >>> m = __import__("5-text_indentation").__doc__
-    >>> len(m) > 1
-    True
-
 Check: function docstring:
     >>> f = __import__("5-text_indentation").text_indentation.__doc__
     >>> len(f) > 1
@@ -32,38 +27,38 @@ Check: passing non-string type:
 Check: ending in non-special char:
     >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres""")
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    <\n>
+    <BLANKLINE>
     Quonam modo?
-    <\n>
+    <BLANKLINE>
     Utrum igitur tibi litteram videor an totas paginas commovere?
-    <\n>
+    <BLANKLINE>
     Non autem hoc:
-    <\n>
+    <BLANKLINE>
     igitur ne illud quidem.
-    <\n>
+    <BLANKLINE>
     Fortasse id optimum, sed ubi illud:
-    <\n>
+    <BLANKLINE>
     Plus semper voluptatis?
-    <\n>
+    <BLANKLINE>
     Teneo, inquit, finem illi videri nihil dolere.
-    <\n>
+    <BLANKLINE>
     Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
-    <\n>
+    <BLANKLINE>
     Si id dicis, vicimus.
-    <\n>
+    <BLANKLINE>
     Inde sermone vario sex illa a Dipylo stadia confecimus.
-    <\n>
+    <BLANKLINE>
     Sin aliud quid voles, postea.
-    <\n>
+    <BLANKLINE>
     Quae animi affectio suum cuique tribuens atque hanc, quam dico.
-    <\n>
+    <BLANKLINE>
     Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
 Check: newline at end:
     >>> text_indentation("dude, where?\n\n")
-    Hi, jack?
-    <\n>
-    <\n>
-    <\n>
+    dude, where?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
 
 
