@@ -1,0 +1,42 @@
+Importing the function from the module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Check: module docstring:
+    >>> m = __import__("0-add_integer").__doc__
+    >>> len(m) > 1
+    True
+
+Check: function docstring:
+    >>> f = __import__("0-add_integer").add_integer.__doc__
+    >>> len(f) > 1
+    True
+
+Check: regular addition:
+    >>> add_integer(4, 3)
+    7
+
+Check: negative with positive:
+    >>> add_integer(-6, 2)
+    -4
+
+Check: positive with negative:
+    >>> add_integer(3, -5)
+    -2
+
+Check: float with int:
+    >>> add_integer(4.2, 3)
+    7
+
+Check: int with float:
+    >>> add_integer(11, 6.6)
+    17
+
+Check: both float:
+    >>> add_integer(2.35, 3.3)
+    5
+
+Check: passed None:
+    >>> add_integer(9, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer

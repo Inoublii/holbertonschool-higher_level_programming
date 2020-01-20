@@ -3,12 +3,12 @@
 def add_integer(a, b=98):
 	 """Adds two integers.
 	 ints:
-        a: integer.
-        b: integer, default 98.
+        a: int
+        b: int
     Raises:
         TypeError: if a, b are not int, float.
     Returns:
-        The sum
+        a + b
     """
 	if type(a) == float:
 		a = int(a)
