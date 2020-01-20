@@ -23,6 +23,10 @@ Check: int with float:
     >>> add_integer(11, 6.6)
     17
 
+Check: both float:
+    >>> add_integer(2.25, 3.3)
+    5
+	
 Check: passed None:
     >>> add_integer(9, None)
     Traceback (most recent call last):
