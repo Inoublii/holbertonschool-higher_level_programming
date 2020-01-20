@@ -10,3 +10,13 @@ Check: function docstring:
 	 >>> f = __import__("101-lazy_matrix_mul").lazy_matrix_mul.__doc__
          >>> len(f) > 1
          True
+
+Check: passing m_b as None:
+	 >>> lazy_matrix_mul([[1, 2], [2, 1]], None)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: Object arrays are not currently supported
+
+Check: m_b empty rows:
+	 >>> print(lazy_matrix_mul([[1, 2], [2, 1]], [[], []]))
+	 []
