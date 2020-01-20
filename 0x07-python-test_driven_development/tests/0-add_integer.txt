@@ -12,23 +12,32 @@ Check: function docstring:
     True
 
 Check: regular addition:
-    >>> add_integer(4, 3)
-    7
+    >>> add_integer(3, 3)
+    6
 
 Check: positive with negative:
-    >>> add_integer(3, -5)
-    -2
+    >>> add_integer(2, -6)
+    -4
+
+Check: negative with positive:
+    >>> add_integer(-6, 2)
+    -4
+
+
+Check: float with int:
+    >>> add_integer(3.1, 3)
+    6
 
 Check: int with float:
-    >>> add_integer(11, 6.6)
+    >>> add_integer(10, 7.7)
     17
 
 Check: both float:
     >>> add_integer(2.25, 3.3)
     5
-	
+
 Check: passed None:
-    >>> add_integer(9, None)
+    >>> add_integer(10, None)
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
