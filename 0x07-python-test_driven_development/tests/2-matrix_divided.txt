@@ -10,7 +10,7 @@ Check: function docstring:
 	>>> f = __import__("2-matrix_divided").matrix_divided.__doc__
 	>>> len(f) > 1
 	True
-	
+
 Check: regular division:
 	>>> matrix = [[1, 2, 3], [4, 5, 6]]
 	>>> matrix_divided(matrix, 3)
@@ -48,3 +48,10 @@ Check: division by zero:
 	Traceback (most recent call last):
 	...
 	ZeroDivisionError: division by zero
+
+	Check: div as float:
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, 4.5)
+	[[0.22, 0.44, 0.67], [0.89, 1.11, 1.33]]
+	>>> matrix
+	[[1, 2, 3], [4, 5, 6]]
