@@ -1,0 +1,12 @@
+Importing the function from the module:
+	>>> lazy_matrix_mul = __import__("101-lazy_matrix_mul").lazy_matrix_mul
+
+Check: module docstring:
+	 >>> m = __import__("101-lazy_matrix_mul").__doc__
+	 >>> len(m) > 1
+	 True
+
+Check: function docstring:
+	 >>> f = __import__("101-lazy_matrix_mul").lazy_matrix_mul.__doc__
+         >>> len(f) > 1
+         True
