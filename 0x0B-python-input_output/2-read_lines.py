@@ -12,7 +12,6 @@ def read_lines(filename="", nb_lines=0):
             i = 0
             for line in x:
                 i += 1
-				print(line, end='')
                 if i == nb_lines:
                     break
-
+                print(line, end='')
