@@ -10,7 +10,7 @@ try:
     jsonlist = load_from_json_file(filename)
 except Exception:
 
-    jsonfile = []
-for arg in argv[1:]:
-    jsonlist.append(arg)
+    jsonlist = []
+for s in argv[1:]:
+    jsonlist.append(s)
 save_to_json_file(jsonlist, filename)
