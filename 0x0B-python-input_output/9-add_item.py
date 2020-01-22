@@ -11,6 +11,6 @@ try:
 except Exception:
 
     jsonlist = []
-for arg in argv[1:]:
-    jsonlist.append(arg)
+for s in argv[1:]:
+    jsonlist.append(s)
 save_to_json_file(jsonlist, filename)
