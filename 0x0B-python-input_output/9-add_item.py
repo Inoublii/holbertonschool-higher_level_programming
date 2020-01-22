@@ -9,7 +9,6 @@ adds arguments to a list then saves to file
 try:
     jsonlist = load_from_json_file(filename)
 except Exception:
-
     jsonfile = []
 for s in argv[1:]:
     jsonlist.append(s)
