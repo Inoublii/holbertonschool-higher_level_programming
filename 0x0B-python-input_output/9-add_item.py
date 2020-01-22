@@ -7,10 +7,10 @@ filename = "add_item.json"
 adds arguments to a list then saves to file
 """
 try:
-    jsonlist = load_from_json_file(filename)
-except Exception:
-
-    jsonlist = []
-for s in argv[1:]:
-    jsonlist.append(s)
-save_to_json_file(jsonlist, filename)
+    s = load_from_json_file(filename)
+except:
+    with open(filename, 'w', encoding='utf_8') as x:
+        x.write('')
+        s = []
+s += argv[1:]
+save_to_json_file(s, filename)
