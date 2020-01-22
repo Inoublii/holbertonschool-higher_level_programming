@@ -12,5 +12,6 @@ except:
     with open(filename, 'w', encoding='utf_8') as x:
         x.write('')
         jsonfile = []
-jsonlist += sys.argv[1:]
+for s in argv[1:]:
+    jsonlist.append(s)
 save_to_json_file(jsonlist, filename)
