@@ -22,25 +22,25 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """updare def"""
         if "id" in kwargs:
-            self.id = kwargs['id']
+            self.id = kwargs["id"]
         elif len(args) > 0:
             self.id = args[0]
         if "width" in kwargs:
-            self.width = kwargs['width']
+            self.__width = kwargs['width']
         elif len(args) > 1:
-            self.width = args[1]
+            self.__width = args[1]
         if "height" in kwargs:
-            self.width = kwargs['height']
+            self.__height = kwargs['height']
         elif len(args) > 2:
-            self.width = args[2]
+            self.__height = args[2]
         if "x" in kwargs:
-            self.width = kwargs['x']
+            self.__x = kwargs["x"]
         elif len(args) > 3:
-            self.width = args[3]
-        if "y" in kwargs:
-            self.width = kwargs['y']
+            self.__x = args[3]
+        if 'y' in kwargs:
+            self.__y = kwargs['y']
         elif len(args) > 4:
-            self.width = args[4]
+            self.__y = args[4]
 
     def area(self):
         '''area function'''
