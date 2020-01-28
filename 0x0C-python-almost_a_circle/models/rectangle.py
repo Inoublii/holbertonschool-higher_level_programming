@@ -18,6 +18,7 @@ class Rectangle(Base):
         """"rectange str"""
         return("[Rectangle] (%s) %s/%s - %s/%s" % (self.id, self.x, self.y,
                                                    self.width, self.height))
+
     def update(self, *args, **kwargs):
         """updare def"""
         if "id" in kwargs:
@@ -40,6 +41,7 @@ class Rectangle(Base):
             self.width = kwargs['y']
         elif len(args) > 4:
             self.width = args[4]
+
     def area(self):
         '''area function'''
         return (self.__width * self.__height)
