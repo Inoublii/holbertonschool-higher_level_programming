@@ -19,6 +19,14 @@ class Rectangle(Base):
         return("[Rectangle] (%s) %s/%s - %s/%s" % (self.id, self.x, self.y,
                                                    self.width, self.height))
 
+    def to_dictionary(self):
+            """dictionairy"""
+            dic = {
+                "id": self.id, "height": self.height, "width": self.width,
+                "x": self.x, "y": self.y,
+            }
+            return (dic)
+
     def update(self, *args, **kwargs):
         """updare def"""
         if "id" in kwargs:

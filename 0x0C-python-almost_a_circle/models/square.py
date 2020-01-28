@@ -36,6 +36,14 @@ class Square(Rectangle):
         elif len(args) > 3:
             self.y = args[3]
 
+        def to_dictionary(self):
+            """dictionairy"""
+            dic = {
+                "id": self.id, "size": self.size,
+                "x": self.x, "y": self.y,
+            }
+            return (dic)
+
     @property
     def size(self):
         '''size getter'''
