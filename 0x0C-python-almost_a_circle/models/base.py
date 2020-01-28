@@ -16,18 +16,19 @@ class Base:
             self.id = self.__nb_objects
 
     @staticmethod
-    def from_json_string(json_string):
-        """json to string """
-        if not json_string:
-            json_string = "[]"
-        return (json.loads(json_string))
-
-    @staticmethod
     def to_json_string(list_dictionaries):
         """dictionairy to Json"""
         if list_dictionaries is None:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
+
+
+    @staticmethod
+    def from_json_string(json_string):
+        """json to string """
+        if not json_string:
+            json_string = "[]"
+        return (json.loads(json_string))
 
     @classmethod
     def save_to_file(cls, list_objs):
