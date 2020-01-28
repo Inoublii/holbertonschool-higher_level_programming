@@ -1,7 +1,6 @@
 #!/usr/bin/pyhton3
-"""importing from Base"""
 from models.base import Base
-
+"""importing from Base"""
 
 class Rectangle(Base):
     """Defining the Rectangle Class"""
