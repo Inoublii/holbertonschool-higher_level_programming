@@ -19,13 +19,6 @@ class Rectangle(Base):
         return("[Rectangle] (%s) %s/%s - %s/%s" % (self.id, self.x, self.y,
                                                    self.width, self.height))
 
-    def to_dictionary(self):
-            """dictionairy"""
-            dic = {
-                "id": self.id, "height": self.height, "width": self.width,
-                "x": self.x, "y": self.y,
-            }
-            return (dic)
 
     def update(self, *args, **kwargs):
         """updare def"""
@@ -65,6 +58,14 @@ class Rectangle(Base):
                 print(end="#")
             print()
 
+    def to_dictionary(self):
+            """dictionairy"""
+            dic = {
+                "id": self.id, "height": self.height, "width": self.width,
+                "x": self.x, "y": self.y,
+            }
+            return (dic)
+
     @property
     def width(self):
         '''width property'''
@@ -85,17 +86,6 @@ class Rectangle(Base):
         '''y property'''
         return self.__y
 
-    @width.setter
-    def width(self, value):
-        '''width Setter'''
-        if type(value) is int:
-            if value > 0:
-                self.__width = value
-            else:
-                raise ValueError("width must be > 0")
-        else:
-            raise TypeError("width must be an integer")
-
     @height.setter
     def height(self, value):
         '''height Setter'''
@@ -106,6 +96,17 @@ class Rectangle(Base):
                 raise ValueError("height must be > 0")
         else:
             raise TypeError("height must be an integer")
+
+    @width.setter
+    def width(self, value):
+        '''width Setter'''
+        if type(value) is int:
+            if value > 0:
+                self.__width = value
+            else:
+                raise ValueError("width must be > 0")
+        else:
+            raise TypeError("width must be an integer")
 
     @x.setter
     def x(self, value):
