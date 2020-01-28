@@ -15,7 +15,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
 
-       @staticmethod
+    @staticmethod
     def from_json_string(json_string):
         """json to string """
         if not json_string:
@@ -32,11 +32,12 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """save to file"""
-        if list_objs is None:
+        filename = cls.__name__ + ".json"
+        openn = open(filename, "w")
+        if list_objs is not None:
             for i, s in enumerate(list_objs):
-                list_objs[en] = cls.to_dictionary(s)
-            open(name, "w").write(cls.to_json_string(s)
+                list_objs[i] = cls.to_dictionary(s)
+            openn.write(cls.to_json_string(list_objs))
         else:
-            open(name, "w").write(cls.to_json_string(None))
-        open(name, "w").close()
-
+            openn.write(cls.to_json_string(None))
+        openn.close()
