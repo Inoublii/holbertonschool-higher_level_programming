@@ -12,10 +12,29 @@ class Square(Rectangle):
 
     def __str__(self):
         '''Square str'''
-        return ("[Square] (%s) %s/%s - %s" % (self.id,
-                                              self.x,
-                                              self.y,
-                                              self.size))
+        return ("[Square](%s) %s/%s - %s" % (self.id,
+                                             self.x,
+                                             self.y,
+                                             self.size))
+    def update(self, *args, **kwargs):
+        """updare def"""
+        if "id" in kwargs:
+            self.id = kwargs["id"]
+        elif len(args) > 0:
+            self.id = args[0]
+        if "size" in kwargs:
+            self.size = kwargs['size']
+        elif len(args) > 1:
+            self.size = args[1]
+        if "x" in kwargs:
+            self.x = kwargs["x"]
+        elif len(args) > 2:
+            self.x = args[2]
+        if 'y' in kwargs:
+            self.y = kwargs['y']
+        elif len(args) > 3:
+            self.y = args[3]
+
 
     @property
     def size(self):
