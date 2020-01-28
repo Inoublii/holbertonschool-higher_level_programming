@@ -56,8 +56,7 @@ class Base:
     def load_from_file(cls):
         """load from file"""
         try:
-            speed = open(cls.__name__ + ".json")
-            with speed as file:
+            with open(cls.__name__ + ".json", "r") as file:
                 lists = []
                 jlist = cls.from_json_string(file.read())
                 for x in jlist:
@@ -65,3 +64,13 @@ class Base:
                 return lists
         except:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save to file csv"""
+        pass
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load from file csv"""
+        pass
