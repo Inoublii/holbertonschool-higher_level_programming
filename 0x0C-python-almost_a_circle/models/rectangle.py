@@ -15,22 +15,22 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """"""
+        """define width"""
         return self.__width
 
     @property
     def height(self):
-        """"""
+        """define height"""
         return self.__height
 
     @property
     def x(self):
-        """"""
+        """define x"""
         return self.__x
 
     @property
     def y(self):
-        """"""
+        """y"""
         return self.__y
 
     @width.setter
