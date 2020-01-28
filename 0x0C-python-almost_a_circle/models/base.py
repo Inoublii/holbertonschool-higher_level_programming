@@ -61,7 +61,7 @@ class Base:
                 lists = []
                 jlist = cls.from_json_string(file.read())
                 for x in jlist:
-                    lists.append(cls.create(**_))
+                    lists.append(cls.create(**x))
                 return lists
         except:
             return []
