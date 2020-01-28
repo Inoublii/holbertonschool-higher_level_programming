@@ -60,8 +60,8 @@ class Rectangle(Base):
     def to_dictionary(self):
             """dictionairy"""
             dic = {
-                "x": self.id, "width": self.width, "height": self.height,
-                "id": self.x, "y": self.y,
+                "x": self.x, "width": self.width, "height": self.height,
+                "id": self.id, "y": self.y,
             }
             return (dic)
 
