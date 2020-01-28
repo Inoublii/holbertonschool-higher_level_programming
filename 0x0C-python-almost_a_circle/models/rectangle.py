@@ -61,7 +61,7 @@ class Rectangle(Base):
             """dictionairy"""
             dic = {
                 "x": self.x, "width": self.width, "id": self.id,
-                "height": self.__height, "y": self.y,
+                "height": self.height, "y": self.y,
             }
             return (dic)
 
