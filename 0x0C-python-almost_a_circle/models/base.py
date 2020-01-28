@@ -56,7 +56,7 @@ class Base:
     def load_from_file(cls):
         """load from file"""
         try:
-            speed = open(cls.__name__ + ".json", "r")
+            speed = open(cls.__name__ + ".json")
             with speed as file:
                 lists = []
                 jlist = cls.from_json_string(file.read())
