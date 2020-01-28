@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """define Base class"""
 import json
+import csv
 
 
 class Base:
@@ -28,6 +29,11 @@ class Base:
         if not json_string:
             json_string = "[]"
         return (json.loads(json_string))
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """draw method"""
+        pass
 
     @classmethod
     def save_to_file(cls, list_objs):
