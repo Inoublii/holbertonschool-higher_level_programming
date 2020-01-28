@@ -14,6 +14,11 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        """"rectange str"""
+        return("[Rectangle] (%s) %s/%s - %s/%s" % (self.id, self.x, self.y,
+                                                   self.width, self.height))
+
     def area(self):
         '''area function'''
         return (self.__width * self.__height)
