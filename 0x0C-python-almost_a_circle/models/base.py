@@ -44,10 +44,24 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        '''class methode'''
+        '''class methode create'''
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         elif cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """load from file"""
+        try:
+            speed = open(cls.__name__ + ".json", "r")
+            with speed as file:
+                lists = []
+                jlist = cls.from_json_string(file.read())
+                for x in jlist:
+                    lists.append(cls.create(**_))
+                return lists
+        except:
+            return []
