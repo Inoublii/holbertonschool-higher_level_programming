@@ -16,6 +16,7 @@ class Square(Rectangle):
                                              self.x,
                                              self.y,
                                              self.size))
+
     def update(self, *args, **kwargs):
         """updare def"""
         if "id" in kwargs:
@@ -34,7 +35,6 @@ class Square(Rectangle):
             self.y = kwargs['y']
         elif len(args) > 3:
             self.y = args[3]
-
 
     @property
     def size(self):
