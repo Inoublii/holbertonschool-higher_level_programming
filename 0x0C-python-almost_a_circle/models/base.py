@@ -41,3 +41,13 @@ class Base:
         else:
             openn.write(cls.to_json_string(None))
         openn.close()
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''class methode'''
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
