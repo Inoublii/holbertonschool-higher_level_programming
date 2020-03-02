@@ -2,4 +2,4 @@
 -- he database name will be passed as an argument of the mysql command
 
 SHOW
-first_table;
+CREATE TABLE first_table;
