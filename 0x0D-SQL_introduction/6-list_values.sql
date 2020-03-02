@@ -3,4 +3,4 @@
 -- The database name will be passed as an argument
 
 SELECT *
-FROM first_database;
+FROM first_table;
