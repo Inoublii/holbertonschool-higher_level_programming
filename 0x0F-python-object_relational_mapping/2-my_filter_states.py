@@ -10,10 +10,11 @@ if __name__ == "__main__":
         host="localhost", user=argv[1],
         passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    cur.execute("SELECT id, name FROM states WHERE name LIKE '{}%'\
+    cur.execute("SELECT * FROM states WHERE name LIKE '{}%'\
          ORDER BY id".format(argv[4]))
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        if row[1] == argv[4]:
+            print(row)
     db.close()
     cur.close()
