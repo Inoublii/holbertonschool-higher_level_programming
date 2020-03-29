@@ -14,15 +14,15 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT cities.name\
          FROM states INNER JOIN cities ON \
-             states.name='{}' AND states.id=cities.state_id ORDER BY cities.id".format(word))
+             states.name='{}' AND states.id=cities.state_id \
+                 ORDER BY cities.id".format(word))
     rows = cur.fetchall()
     i = 0
     for row in rows:
         if i != 0:
             print(", ", end="")
-        i+=1
+        i += 1
         print(row[0], end="")
     print()
     db.close()
     cur.close()
-
