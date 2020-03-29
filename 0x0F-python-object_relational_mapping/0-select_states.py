@@ -12,3 +12,4 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
     db.close()
+    cur.close()
