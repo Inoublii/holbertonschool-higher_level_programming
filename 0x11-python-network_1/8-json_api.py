@@ -9,7 +9,7 @@ the response.
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     if len(sys.argv) == 1:
-        qer = ""
+        q = ""
     elif len(sys.argv) == 2:
         q = sys.argv[1]
     res = requests.post(url, data={"q": q})
