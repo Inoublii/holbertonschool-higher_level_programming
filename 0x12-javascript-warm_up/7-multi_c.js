@@ -1,10 +1,10 @@
 #!/usr/bin/node
-let x = 0;
-const arg = process.argv[2];
-if (isNaN(arg)) {
-  console.log('Missing number of occurrences');
-}
-while (x < arg) {
-  console.log('C is fun');
-  x++;
+// JS to print X square by number of passed argument
+'use strict';
+if (isNaN(process.argv[2])) {
+  console.log('Missing size');
+} else {
+  for (let count = 0; count < process.argv[2]; count++) {
+    console.log('X'.repeat(process.argv[2]));
+  }
 }
