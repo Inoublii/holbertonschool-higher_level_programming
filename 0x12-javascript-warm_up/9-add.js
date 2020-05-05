@@ -1,6 +1,4 @@
 #!/usr/bin/node
-// JS to print the addition of two integers given as arguments
-'use strict';
 (function add (a, b) {
   a = Number(process.argv[2]);
   b = Number(process.argv[3]);
