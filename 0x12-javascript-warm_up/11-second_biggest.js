@@ -1,5 +1,5 @@
 #!/usr/bin/node
-(function secondBiggest (arg) {
+(function secondBiggest () {
   const list = [];
   if (process.argv.length < 4) {
     console.log(0);
